@@ -1,0 +1,96 @@
+@use "global" as *;
+
+
+.ctaBlock {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  // position: relative;
+  padding-top: rem(12);
+  padding-bottom: rem(15);
+  padding-left: rem(30);
+  padding-right: rem(30);
+  z-index: 10;
+  
+  @include mq(md) {
+    display: none;
+  }
+}
+
+
+.ctaBlock::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #FAF9F3; 
+  width: 100%;
+  height: 100%; 
+  z-index: -1;
+}
+
+
+.ctaBlock__contents {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: rem(8);
+}
+
+
+.ctaBlock__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(4);
+  padding-top: rem(12);
+  padding-bottom: rem(11);
+  border: solid 1px #F33D3D;
+  border-radius: rem(5);
+  background-color: $white;
+}
+
+
+.ctaBlock__box.ctaBlock__box--requestInformation {
+  gap: rem(9);
+  border: solid 1px #339DFF;
+}
+
+
+.ctaBlock__box:hover {
+  opacity: 0.6;
+}
+
+
+.ctaBlock__text {
+  font-size: rem(12);
+  font-family: $base-font-family;
+  font-weight: $Medium;
+  color: #F33D3D;
+  line-height: 1.0;
+  letter-spacing: 0.2em;
+
+  @include mq(md) {
+    font-size: rem(24);
+  }
+}
+
+
+.ctaBlock__text.ctaBlock__text--requestInformation {
+  color: #339DFF;
+}
+
+
+.ctaBlock__icon  img {
+  aspect-ratio: 60 / 41;
+  object-fit: contain;
+  width: rem(29);
+}
+
+
+.ctaBlock__icon.ctaBlock__icon--requestInformation img {
+  aspect-ratio: 55 / 39;
+  width: rem(26);
+}
+

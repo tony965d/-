@@ -1,0 +1,26 @@
+@use "global" as *;
+
+
+.blogCards {
+  display: grid;
+  // grid-template-columns: 1fr;
+  gap: rem(38);
+  margin-top: rem(12);
+  
+  @include mq(md) {
+    display: flex;
+    gap: unset;
+    margin-top: rem(51);
+  }
+}
+
+
+.blogCards__card {
+    
+  @include mq(md) {
+    aspect-ratio: 227 / 155;
+    // width: rem(258);
+    width: 100%;
+    height: auto;
+  }
+}

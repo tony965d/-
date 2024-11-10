@@ -1,0 +1,60 @@
+@use "global" as *;
+
+
+.sectionHeader {
+  display: flex;
+  flex-direction: column;
+  gap: rem(3);
+
+  @include mq(md) {
+    gap: rem(6);
+  }
+}
+
+
+.sectionHeader.sectionHeader--center {
+  align-items: center;
+}
+
+
+.sectionHeader__title {
+  font-size: rem(38);
+  font-family: $english-font-family;
+  font-weight: $Medium;
+  color: $black;
+  line-height: 1.2;
+  letter-spacing: 0.1em;
+  background: linear-gradient(90deg, #8e2de2 0%, #ea5455 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  @include mq(md) {
+    font-size: rem(64);
+  }
+}
+
+
+.sectionHeader__title.sectionHeader__title--openCampus {
+  letter-spacing: 0;
+}
+
+
+.sectionHeader__title.sectionHeader__title--event {
+  letter-spacing: 0;
+}
+
+
+.sectionHeader__subTitle {
+  font-size: rem(15);
+  font-family: $base-font-family;
+  font-weight: $Regular;
+  color: $black;
+  line-height: 1.2;
+  letter-spacing: 0;
+
+  @include mq(md) {
+    font-size: rem(23);
+  }
+}

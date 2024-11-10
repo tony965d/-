@@ -1,0 +1,43 @@
+@use "global" as *;
+
+
+
+.message {
+  padding-bottom: rem(65);
+
+  @include mq(md) {
+    padding-bottom: rem(228);
+  }
+}
+
+
+.message__inner {
+
+}
+
+
+.message__wrapper {
+
+}
+
+
+.message__sectionHeader {
+
+}
+
+
+.message__body {
+  margin-top: rem(12);
+
+  @include mq(md) {
+    margin-top: rem(27);
+  }
+}
+
+
+.message__cards {
+
+}
+
+
+

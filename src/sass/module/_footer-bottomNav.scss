@@ -1,0 +1,133 @@
+@use "global" as *;
+
+
+.footer-bottomNav {
+  display: block;
+}
+
+
+.footer-bottomNav__menu {
+  display: grid;
+  grid-template-columns: calc(174 / 696 * 100%) calc(204 / 696 * 100%) auto;
+  row-gap: rem(15);
+
+  @include mq(md) {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: rem(20);
+    row-gap: rem(27);
+  }
+}
+
+
+.footer-bottomNav__item {
+  position: relative;
+
+  @include mq(md) {
+    padding-left: rem(20);
+  }
+}
+
+
+.footer-bottomNav__item.footer-bottomNav__item--first {
+
+  @include mq(md) {
+    padding-left: 0;
+  }
+}
+
+
+.footer-bottomNav__item.footer-bottomNav__item--first::before {
+
+  @include mq(md) {
+    display: none;
+  }
+}
+
+
+.footer-bottomNav__item.footer-bottomNav__item--return {
+
+  @include mq(md) {
+    padding-left: 0;
+  }
+}
+
+
+.footer-bottomNav__item.footer-bottomNav__item--return::before {
+
+  @include mq(md) {
+    display: none;
+  }
+}
+
+
+.footer-bottomNav__item::before {
+
+  @include mq(md) {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: rem(0.5);
+    height: 60%;
+    background-color: $white;
+  }
+}
+
+.footer-bottomNav__item:nth-of-type(3n-1) {
+  padding-left: rem(22);
+}
+
+
+.footer-bottomNav__item:nth-of-type(3n-1)::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: rem(0.5);
+  height: 60%;
+  background-color: $white;
+}
+
+
+.footer-bottomNav__item:nth-of-type(3n) {
+  padding-left: rem(22);
+}
+
+
+.footer-bottomNav__item:nth-of-type(3n)::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: rem(0.5);
+  height: 60%;
+  background-color: $white;
+}
+
+
+.footer-bottomNav__link {
+  display: block;
+  font-size: rem(8);
+  font-family: $base-font-family;
+  font-weight: $Medium;
+  color: $white;
+  line-height: 1.0;
+  letter-spacing: 0;
+//   font-feature-settings: "palt";
+// -webkit-font-feature-settings: "palt";
+// -moz-font-feature-settings: "palt";
+
+  @include mq(md) {
+    // font-size: rem(14);
+    font-size: clamp(9px, 1.2vw, 13.6px);
+  }
+}
+
+
+.footer-bottomNav__link:hover {
+  opacity: 0.6;
+}

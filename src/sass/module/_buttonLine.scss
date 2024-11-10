@@ -1,0 +1,59 @@
+@use "global" as *;
+
+
+.buttonLine {
+  position: relative;
+  display: inline-block;
+  font-size: rem(12);
+  font-family: $base-font-family;
+  font-weight: $Regular;
+  color: $black;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  width: rem(182);
+  padding-top: rem(9);
+  padding-left: rem(31);
+  padding-bottom: rem(9);
+  background-color: $white;
+  border-radius: rem(26);
+  
+  @include mq(md) {
+    font-size: rem(20);
+    width: rem(659);
+    padding-top: rem(14);
+    padding-left: rem(52);
+    padding-bottom: rem(14);
+    border-radius: rem(28);
+  }
+}
+
+
+.buttonLine::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: rem(-99);
+  background-image: url(../images/common/line-button-bg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: rem(97);
+  aspect-ratio: 202 / 154;
+  z-index: 1;
+  
+  @include mq(md) {
+    right: rem(-248);
+    bottom: rem(-8);
+    aspect-ratio: 166 / 127;
+    width: rem(189);
+  }
+}
+
+
+.buttonLine:hover {
+  opacity: 0.6;
+}
+
+
+.buttonLine:hover .buttonLine::before {
+  opacity: 1;
+}

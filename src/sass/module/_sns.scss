@@ -1,0 +1,45 @@
+@use "global" as *;
+
+
+.sns {
+  padding-bottom: rem(44);
+
+  @include mq(md) {
+    padding-bottom: rem(123);
+  }
+}
+
+
+.sns__inner.inner {
+
+  @include mq(md) {
+    max-width: rem(896);
+  }
+}
+
+
+.sns__wrapper {
+
+}
+
+
+.sns__block {
+  margin-top: rem(35);
+
+  @include mq(md) {
+    margin-top: rem(46);
+  }
+}
+
+
+.sns__bannerSlide {
+  margin-top: rem(118);
+
+  @include mq(md) {
+    margin-top: rem(273);
+  }
+}
+
+
+
+

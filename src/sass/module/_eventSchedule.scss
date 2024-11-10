@@ -1,0 +1,157 @@
+@use "global" as *;
+
+
+.eventSchedule__list {
+  display: flex;
+  flex-direction: column;
+  gap: rem(15);
+
+  @include mq(md) {
+    gap: rem(36);
+  }
+}
+
+
+.eventSchedule__item {
+  padding-left: rem(10);
+  padding-bottom: rem(12);
+  border-bottom: solid 1px #A6A6A6;
+  
+  @include mq(md) {
+    padding-left: rem(23);
+    padding-bottom: rem(27);
+  }
+}
+
+
+.eventSchedule__item:last-child {
+
+  @include mq(md) {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+}
+
+
+
+
+.eventSchedule__item-block {
+  display: flex;
+  align-items: center;
+  gap: 30%;
+  // gap: rem(96);
+  
+  @include mq(md) {
+    // gap: rem(228);
+    gap: calc(197 / 725 * 100%);
+  }
+}
+
+
+.eventSchedule__date {
+  font-size: rem(9);
+  font-family: $base-font-family;
+  font-weight: $Regular;
+  color: $black;
+  line-height: 1.2;
+  letter-spacing: 0;
+  width: 20%;
+  
+  @include mq(md) {
+    font-size: rem(20);
+    width: calc(92 / 725 * 100%);
+  }
+}
+
+
+.eventSchedule__timeBlock {
+  display: flex;
+  flex-wrap: wrap;
+  gap: rem(12);
+  width: 50%;
+  
+  @include mq(md) {
+    gap: rem(27);
+    width: calc(436 / 725 * 100%);
+  }
+}
+
+
+.eventSchedule__time {
+  position: relative;
+  font-size: rem(8);
+  font-family: $base-font-family;
+  font-weight: $Regular;
+  color: $white;
+  line-height: 1.0;
+  letter-spacing: 0;
+  width: rem(99);
+  padding: rem(6) rem(15);
+  background-color: #82A2F4;
+  border-radius: rem(10);
+  
+  @include mq(md) {
+    font-size: rem(18);
+    width: rem(234);
+    padding: rem(14) rem(36);
+    border-radius: rem(23);
+  }
+}
+
+
+.eventSchedule__time::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: rem(16);
+  transform: translateY(-50%) rotate(45deg);
+  width: rem(3);
+  height: rem(3);
+  border: 0;
+  border-top: solid 1px $white;
+  border-right: solid 1px $white;
+  
+  @include mq(md) {
+    right: rem(36);
+    width: rem(6);
+    height: rem(6);
+  }
+}
+
+
+.eventSchedule__timeBlock.eventSchedule__timeBlock--red .eventSchedule__time {
+  background-color: #FF6868; 
+}
+
+
+.eventSchedule__caution {
+  margin-top: rem(12);
+
+  @include mq(md) {
+    margin-top: rem(27);
+  }
+}
+
+
+.eventSchedule__caution-text {
+  font-size: rem(7);
+  font-family: $base-font-family;
+  font-weight: $Regular;
+  color: $black;
+  line-height: 1.0;
+  letter-spacing: 0;
+
+  @include mq(md) {
+    font-size: rem(16);
+  }
+}
+
+
+.eventSchedule__button {
+  text-align: center;
+  margin-top: rem(31);
+
+  @include mq(md) {
+    margin-top: rem(73);
+  }
+}

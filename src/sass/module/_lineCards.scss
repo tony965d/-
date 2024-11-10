@@ -1,0 +1,15 @@
+@use "global" as *;
+
+
+.lineCards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: rem(9);
+  row-gap: rem(24);
+
+  @include mq(md) {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: rem(13);
+    row-gap: rem(48);
+  }
+}

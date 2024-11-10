@@ -1,0 +1,55 @@
+@use "global" as *;
+
+
+.section-subHeader {
+  position: relative;
+}
+
+
+.section-subHeader::before {
+  content: "";
+  position: absolute;
+  top: rem(-18);
+  left: rem(-12);
+  transform: rotate(45deg);
+  background-color: #EA5455; 
+  width: rem(1);
+  height: rem(30); 
+  z-index: -1;
+  
+  @include mq(md) {
+    top: rem(-40);
+    left: rem(-26);
+    height: rem(72); 
+  }
+}
+
+
+.section-subHeader__subTitle {
+  font-size: rem(7);
+  font-family: $base-font-family;
+  font-weight: $Medium;
+  color: #EA5455;
+  line-height: 1.2;
+  letter-spacing: 0;
+
+  @include mq(md) {
+    font-size: rem(16);
+  }
+}
+
+
+.section-subHeader__title {
+  font-size: rem(15);
+  font-family: $base-font-family;
+  font-weight: $Medium;
+  color: $black;
+  line-height: 1.2;
+  letter-spacing: 0;
+  margin-top: rem(3);
+  
+  @include mq(md) {
+    font-size: rem(36);
+    margin-top: rem(6);
+  }
+}

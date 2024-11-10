@@ -1,0 +1,52 @@
+@use "global" as *;
+
+
+.snsBlock {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: rem(19);
+  
+  @include mq(md) {
+    gap: rem(51);
+  }
+}
+
+
+.snsBlock-icon:hover {
+  opacity: 0.6;
+}
+
+
+.snsBlock-icon img {
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+
+  @include mq(md) {
+    width: rem(127);
+  }
+}
+
+
+.snsBlock__caption {
+  position: absolute;
+  top: rem(-40);
+  left: rem(-15);
+  
+  @include mq(md) {
+    top: rem(-85);
+    left: rem(-40);
+  }
+}
+
+
+.snsBlock__caption img {
+  aspect-ratio:  165 / 82;
+  object-fit: contain;
+  width: rem(79);
+  
+  @include mq(md) {
+    aspect-ratio:  148 / 75;
+    width: rem(168);
+  }
+}

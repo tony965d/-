@@ -1,0 +1,67 @@
+@use "global" as *;
+
+
+.pcNav-sub {
+  display: none;
+
+  @include mq(md) {
+    display: block;
+  }
+}
+
+
+.pcNav-sub__items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  // gap: rem(52);
+  // gap: clamp(rem(10), 3.8vw, rem(52));
+  row-gap: rem(10);
+  column-gap: rem(52);
+}
+
+
+.pcNav-sub__item {
+  font-size: rem(14);
+  font-family: $base-font-family;
+  font-weight: $Regular;
+  color: $black;
+  line-height: 1.0;
+  letter-spacing: 0.01em;
+}
+
+
+.pcNav-sub__menu {
+  position: relative;
+  display: inline-block;
+  font-size: rem(13);
+  font-family: $base-font-family;
+  font-weight: $Regular;
+  color: $black;
+  line-height: 1.0;
+  letter-spacing: 0;
+  padding-left: rem(18);
+}
+
+
+.pcNav-sub__menu::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #FF6868;
+  width: rem(13);
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.pcNav-sub__menu:hover {
+  opacity: 0.6;
+}
+
+
+.pcNav-sub__title {
+
+}
+

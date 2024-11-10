@@ -1,0 +1,156 @@
+@use "global" as *;
+
+
+.faqBlock {
+  position: relative;
+  box-shadow: 0 rem(5) rem(5) rgba(0, 0, 0, 0.25);
+  border-radius: rem(16);
+  padding-top: rem(15);
+  padding-bottom: rem(15);
+  padding-left: rem(18);
+  padding-right: rem(37);
+  
+  @include mq(md) {
+    border-radius: rem(34);
+    padding-top: rem(36);
+    padding-bottom: rem(36);
+    padding-left: rem(43);
+    padding-right: rem(88);
+  }
+}
+
+
+.faqBlock::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: $white; 
+  width: 100%;
+  height: 100%; 
+  z-index: -1;
+  border-radius: rem(14);
+
+  @include mq(md) { 
+    border-radius: rem(34);
+  }
+}
+
+
+.faqBlock__button {
+  position: absolute;
+  top: 50%;
+  right: rem(37);
+  transform: translateY(-50%);
+  width: rem(15);
+  height: rem(15);
+  border: solid 1px #FF6868;
+  border-radius: 50%;
+  z-index: 1;
+  cursor: pointer;
+  
+  @include mq(md) {
+    right: rem(88);
+    width: rem(36);
+    height: rem(36);
+  }
+}
+
+
+.faqBlock__button::before { 
+	content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  width: rem(7);
+  height: rem(0.5);
+  background-color: #FF6868;
+  z-index: -1;
+  
+  @include mq(md) {
+    width: rem(16);
+    height: rem(1);
+  }
+}
+
+
+.faqBlock__button::after { 
+	content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: rem(7);
+  height: rem(0.5);
+  transform: translate(-50%) rotate(90deg);
+  transition: .3s;
+  background-color: #FF6868;
+  z-index: -1;
+  
+  @include mq(md) {
+    width: rem(16);
+    height: rem(1);
+  }
+}
+
+
+.faqBlock__button.active::after { 
+	content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: rem(7);
+  height: rem(0.5);
+  transform: translate(-50%) rotate(180deg);
+  transition: .3s;
+  background-color: #FF6868;
+  z-index: -1;
+  
+  @include mq(md) {
+    width: rem(16);
+    height: rem(1);
+  }
+}
+
+
+.faqBlock__title {
+  position: relative;
+  font-size: rem(8);
+  font-family: $base-font-family;
+  font-weight: $Regular;
+  color: #FF6868;
+  line-height: 1.7;
+  letter-spacing: 0;
+  
+  @include mq(md) {
+    font-size: rem(20);
+  }
+}
+
+
+.faqBlock__body {
+  // padding: rem(24) rem(16);
+  padding-right: rem(59);
+  margin-top: rem(8);
+  
+  @include mq(md) {
+    padding-right: rem(140);
+    margin-top: rem(18);
+    // padding-right: rem(123);
+    // padding: rem(40);
+  }
+}
+
+
+.faqBlock__text {
+  font-size: rem(8);
+  font-family: $base-font-family;
+  font-weight: $Regular;
+  color: $black;
+  line-height: 1.8;
+  letter-spacing: 0;
+
+  @include mq(md) {
+    font-size: rem(18);
+  }
+}

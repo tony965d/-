@@ -1,0 +1,25 @@
+@use "global" as *;
+
+
+
+.event__dot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(5);
+  margin-top: rem(11);
+  
+  @include mq(md) {
+    gap: rem(11);
+    margin-top: rem(27);
+  }
+}
+
+
+.event__block {
+  margin-top: rem(15);
+
+  @include mq(md) {
+    margin-top: rem(36);
+  }
+}

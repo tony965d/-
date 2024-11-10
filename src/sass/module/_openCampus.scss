@@ -1,0 +1,95 @@
+@use "global" as *;
+
+
+.openCampus {
+  position: relative;
+  padding-top: rem(99);
+  padding-bottom: rem(38);
+  
+  @include mq(md) {
+    padding-top: rem(281);
+    padding-bottom: rem(137);
+  }
+}
+
+
+.openCampus::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #FFF4F2; 
+  width: 100%;
+  height: 100%; 
+  z-index: -1;
+}
+
+
+.openCampus.openCampus--sub::before {
+  background-color: unset;
+}
+
+
+.openCampus__inner.inner {
+
+}
+
+
+.openCampus__wrapper {
+  position: relative;
+}
+
+
+.openCampus__logo {
+  position: absolute;
+  top: rem(-61);
+  left: 50%;
+  transform: translateX(-50%);
+  
+  @include mq(md) {
+    top: rem(-145);
+  }
+}
+
+
+.openCampus__logo img {
+  aspect-ratio: 174 / 122;
+  object-fit: contain;
+  width: rem(83);
+  
+  @include mq(md) {
+    width: rem(198);
+  }
+}
+
+
+.openCampus__body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: rem(17);
+  row-gap: rem(10);
+  margin-top: rem(12);
+  
+  @include mq(md) {
+    column-gap: rem(50);
+    row-gap: rem(28);
+    margin-top: rem(27);
+  }
+}
+
+
+.openCampus__banner:hover {
+  opacity: 0.6;
+}
+
+
+.openCampus__button {
+  text-align: center;
+  margin-top: rem(19);
+
+  @include mq(md) {
+    margin-top: rem(65);
+  }
+}
+
+

@@ -1,0 +1,180 @@
+@use "global" as *;
+
+
+.circleBox {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: rem(6);
+  width: rem(111);
+  aspect-ratio: 1 / 1;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  background-color: rgba(250, 250, 250, 0.8);
+
+  @include mq(md) {
+    width: rem(225);
+    gap: rem(14);
+  }
+}
+
+
+.circleBox.circleBox--first {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+.circleBox.circleBox--second {
+  top: rem(100);
+  left: 0;
+
+  @include mq(md) {
+    top: rem(199);
+    left: rem(244);
+  }
+}
+
+
+.circleBox.circleBox--third {
+  top: rem(100);
+  left: rem(119);
+  
+  @include mq(md) {
+    top: rem(199);
+    left: 0;
+  }
+}
+
+
+.circleBox__top {
+  font-size: rem(10);
+  font-family: $base-font-family;
+  font-weight: $Medium;
+  color: $black;
+  line-height: 1.0;
+  letter-spacing: 0;
+
+  @include mq(md) {
+    font-size: rem(20);
+  }
+}
+
+
+.circleBox__topSecond {
+  font-size: rem(11);
+  font-family: $base-font-family;
+  font-weight: $Medium;
+  color: $black;
+  line-height: 1.0;
+  letter-spacing: 0.01em;
+
+  @include mq(md) {
+    font-size: rem(23);
+  }
+}
+
+
+.circleBox__topSecond-sub {
+  font-size: rem(8);
+  font-family: $base-font-family;
+  font-weight: $Medium;
+  color: $black;
+  line-height: 1.0;
+  letter-spacing: 0.01em;
+
+  @include mq(md) {
+    font-size: rem(17);
+  }
+}
+
+
+
+.circleBox__middle {
+  font-size: rem(12);
+  font-family: $base-font-family;
+  font-weight: $Bold;
+  color: #F33D3D;
+  line-height: 1.0;
+  letter-spacing: 0;
+
+  @include mq(md) {
+    font-size: rem(25);
+  }
+}
+
+
+.circleBox__middleFirst {
+  font-size: rem(18);
+  font-family: $base-font-family;
+  font-weight: $Medium;
+  color: #F33D3D;
+  line-height: 1.0;
+  letter-spacing: 0.01em;
+
+  @include mq(md) {
+    font-size: rem(36);
+  }
+}
+
+.circleBox__bottom {
+  font-size: rem(19);
+  font-family: $base-font-family;
+  font-weight: $Bold;
+  color: #F33D3D;
+  line-height: 1.0;
+  letter-spacing: 0.1em;
+
+  @include mq(md) {
+    font-size: rem(39);
+  }
+}
+
+
+.circleBox__bottom-sub {
+  font-size: rem(27);
+  font-family: $base-font-family;
+  font-weight: $Bold;
+  color: #F33D3D;
+  line-height: 1.0;
+  letter-spacing: 0;
+
+  @include mq(md) {
+    font-size: rem(55);
+  }
+}
+
+
+.circleBox__bottomFirst {
+  font-size: rem(26);
+  font-family: $base-font-family;
+  font-weight: $Bold;
+  color: #F33D3D;
+  line-height: 1.0;
+  letter-spacing: 0;
+
+  @include mq(md) {
+    font-size: rem(52);
+  }
+}
+
+
+.circleBox__bottomFirst-sub {
+  font-size: rem(14);
+  font-family: $base-font-family;
+  font-weight: $Bold;
+  color: #F33D3D;
+  line-height: 1.0;
+  letter-spacing: 0.01em;
+
+  @include mq(md) {
+    font-size: rem(28);
+  }
+}
+
+
+
+

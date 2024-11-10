@@ -1,0 +1,81 @@
+@use "global" as *;
+
+
+.news {
+  position: relative;
+  padding-top: rem(73);
+  padding-bottom: rem(96);
+  
+  @include mq(md) {
+    padding-top: rem(228);
+    padding-bottom: rem(273);
+  }
+}
+
+
+.news::before {
+  content: "";
+  position: absolute;
+  top: rem(-38);
+  right: 0;
+  background-image: url(../images/common/news-bg-right.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  aspect-ratio: 108 / 258;
+  width: rem(52);
+  z-index: -1;
+  
+  @include mq(md) {
+    top: rem(-75);
+    width: rem(123);
+  }
+}
+
+
+.news::after {
+  content: "";
+  position: absolute;
+  bottom: rem(17);
+  left: 0;
+  background-image: url(../images/common/news-bg-left.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  aspect-ratio: 160 / 232;
+  width: rem(77);
+  z-index: -1;
+  
+  @include mq(md) {
+    bottom: rem(9);
+    width: rem(182);
+  }
+}
+
+
+.news__inner.inner {
+
+}
+
+
+.news__wrapper {
+
+}
+
+
+.news__sectionHeader {
+
+}
+
+
+.news__twoColumn {
+
+}
+
+
+.news-twoColumn {
+
+}
+
+
+
+
+

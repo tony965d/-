@@ -1,0 +1,60 @@
+@use "global" as *;
+
+
+.schoolArea__wrapper {
+  padding: rem(20) 0;
+
+  @include mq(md) {
+    padding: rem(27) 0;
+  }
+}
+
+
+.schoolArea__inner.inner {
+  padding-right: rem(11);
+  padding-left: rem(11);
+
+  @include mq(md) {
+    padding-right: rem(25);
+    padding-left: rem(25);
+  }
+}
+
+
+.schoolArea__list {
+  display: grid;
+  // grid-template-columns: calc(176 / 735 * 100%) calc(240 / 735 * 100%) calc(192 / 735 * 100%);
+  grid-template-columns: calc(176 / 735 * 100%) calc(240 / 735 * 100%) auto;
+  column-gap: rem(30);
+  row-gap: rem(19);
+
+  @include mq(md) {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: rem(41);
+    row-gap: rem(18);
+  }
+}
+
+
+.schoolArea__link {
+  display: block;
+  font-size: rem(7);
+  font-family: $base-font-family;
+  font-weight: $Regular;
+  color: $black;
+  line-height: 1.5;
+  letter-spacing: 0;
+//   font-feature-settings: "palt";
+// -webkit-font-feature-settings: "palt";
+// -moz-font-feature-settings: "palt";
+
+  @include mq(md) {
+    font-size: rem(13.6);
+  }
+}
+
+
+.schoolArea__link:hover {
+  opacity: 0.6;
+}

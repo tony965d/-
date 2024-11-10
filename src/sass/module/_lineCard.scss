@@ -1,0 +1,75 @@
+@use "global" as *;
+
+
+.lineCard {
+  position: relative;
+  padding: rem(14) 0;
+  
+  @include mq(md) {
+    padding-top: rem(32);
+    padding-bottom: rem(32);
+  }
+}
+
+
+.lineCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: $white; 
+  width: 100%;
+  height: 100%; 
+  z-index: -1;
+  border-radius: rem(6);
+
+  @include mq(md) {
+    border-radius: rem(10);
+  }
+}
+
+
+.lineCard__icon {
+  position: absolute;
+  top: rem(-18);
+  left: rem(-6);
+  
+  @include mq(md) {
+    top: rem(-35);
+    left: rem(-13);
+  }
+}
+
+
+.lineCard__icon img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  width: rem(29);
+  
+  @include mq(md) {
+    width: rem(57);
+  }
+}
+
+
+.lineCard__body {
+  text-align: center;
+}
+
+
+.lineCard__text {
+  display: inline-block;
+  font-size: rem(10);
+  font-family: $base-font-family;
+  font-weight: $Medium;
+  color: #00C300;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+  text-align: left;
+  
+  @include mq(md) {
+    font-size: rem(18);
+    letter-spacing: 0;
+  }
+}
+

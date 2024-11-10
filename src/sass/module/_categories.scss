@@ -1,0 +1,14 @@
+@use "global" as *;
+
+
+.categories {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: rem(4);
+  
+  @include mq(md) {
+    gap: rem(5);
+    align-items: center;
+  }
+}

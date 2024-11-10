@@ -1,0 +1,23 @@
+@use "global" as *;
+
+
+.snsSlide {
+  position: relative;
+}
+
+
+.snsSlide__swiper-slide:hover {
+  opacity: 0.6;
+}
+
+
+.snsSlide__swiper-slide img {
+  // aspect-ratio: 389 / 138;
+  // width: rem(187);
+  object-fit: contain;
+  
+  // @include mq(md) {
+  //   aspect-ratio: 326 / 116;
+  //   width: rem(371);
+  // }
+}

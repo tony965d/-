@@ -1,0 +1,35 @@
+@use "global" as *;
+
+
+.squareButton {
+  position: relative;
+  display: inline-block;
+  font-size: rem(12);
+  font-family: $base-font-family;
+  font-weight: $Regular;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  color: #FF6868;
+  background-color: $white;
+  text-align: center;
+  width: rem(188);
+  padding-top: rem(5);
+  padding-bottom: rem(5);
+  border: solid 1px #FF6868;
+  transition: .3s;
+  z-index: 0;
+  
+  @include mq(md) {
+    font-size: rem(18);
+    width: 100%;
+    // width: rem(260);
+    padding-top: rem(7);
+    padding-bottom: rem(8);
+  }
+}
+
+
+.squareButton:hover {
+  opacity: 0.6;
+}
+

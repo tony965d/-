@@ -1,0 +1,49 @@
+@use "global" as *;
+
+
+.button {
+  position: relative;
+  display: inline-block;
+  font-size: rem(10);
+  font-family: $base-font-family;
+  font-weight: $Medium;
+  color: $white;
+  line-height: 1.0;
+  letter-spacing: 0.2em;
+  text-align: center;
+  width: rem(197);
+  background: linear-gradient(to right, #FEB692 0%, #EA5455 100%);
+  padding-top: rem(10);
+  padding-bottom: rem(10);
+  border-radius: rem(38);
+  transition: .3s;
+  z-index: 0;
+  
+  @include mq(md) {
+    font-size: rem(23);
+    letter-spacing: 0.1em;
+    width: rem(467);
+    padding-top: rem(23);
+    padding-bottom: rem(23);
+  }
+}
+
+
+// .button::before {
+//   content: '';
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 0%;
+//   height: 100%;
+//   background-color: $black;
+//   border: solid 1px $white;
+//   transition: .3s;
+//   z-index: -1;
+// }
+
+
+.button:hover {
+  opacity: 0.6;
+  transition: .3s;
+}

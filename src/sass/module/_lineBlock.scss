@@ -1,0 +1,77 @@
+@use "global" as *;
+
+
+.lineBlock {
+  position: relative;
+  padding-top: rem(23);
+  padding-right: rem(20);
+  padding-left: rem(13);
+  padding-bottom: rem(23);
+  
+  @include mq(md) {
+    padding-top: rem(46);
+    padding-right: rem(123);
+    padding-left: rem(123);
+    padding-bottom: rem(64);
+  }
+}
+
+
+.lineBlock::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, #81FBB8 0%, #5CD947 50%, #28C76F 100%);
+  width: 100%;
+  height: 100%; 
+  z-index: -1;
+  border-radius: rem(7);
+  
+  @include mq(md) {
+    border-radius: rem(23);
+  }
+}
+
+
+.lineBlock__cards {
+  margin-top: rem(27);
+
+  @include mq(md) {
+    margin-top: rem(54);
+  }
+}
+
+
+.lineBlock__header {
+  text-align: center;
+}
+
+
+.lineBlock__title {
+  display: inline-block;
+  font-size: rem(23);
+  font-family: $base-font-family;
+  font-weight: $Bold;
+  color: $white;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  text-align: center;
+  border-bottom: solid 1px $white;
+
+  @include mq(md) {
+    font-size: rem(48);
+    padding-right: rem(82);
+    padding-left: rem(82);
+    padding-bottom: rem(8);
+  }
+}
+
+
+.lineBlock__button {
+  margin-top: rem(12);
+
+  @include mq(md) {
+    margin-top: rem(27);
+  }
+}

@@ -1,0 +1,18 @@
+@use "global" as *;
+
+
+.sectionOuter {
+  position: relative;
+}
+
+
+.sectionOuter::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(250, 249, 243, 0) 0%, rgba(250, 249, 243, 0.9) 17%, rgba(250, 249, 243, 1.0) 100%);
+  z-index: -1;
+}

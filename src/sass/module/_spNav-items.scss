@@ -1,0 +1,40 @@
+@use "global" as *;
+
+
+
+.spNav-items {
+  
+}
+
+.spNav-items__item {
+  border-bottom: solid 1px #A6A6A6;
+}
+
+
+.spNav-items__item:first-child {
+  border-top: solid 1px #A6A6A6;
+}
+
+
+.spNav-items__item:last-child {
+  border-bottom: none;
+}
+
+
+.spNav-items__link {
+  display: block;
+  font-size: rem(12);
+  font-family: $base-font-family;
+  font-weight: $Regular;
+  color: $black;
+  line-height: 1.0;
+  letter-spacing: 0;
+  font-feature-settings: "palt";
+-webkit-font-feature-settings: "palt";
+-moz-font-feature-settings: "palt";
+  padding-top: rem(12);
+  padding-left: rem(13);
+  padding-right: rem(4);
+  padding-bottom: rem(12);
+}
+

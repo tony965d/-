@@ -1,0 +1,126 @@
+@use "global" as *;
+
+
+.menuBox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(4);
+  width: 100%;
+  padding-top: rem(30);
+  padding-bottom: rem(28);
+  background-color: $white;
+}
+
+
+.menuBox::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: rem(12);
+  height: rem(12);
+  clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+}
+
+
+.menuBox.menuBox--first::before {
+  background-color: #F33D3D;
+}
+
+
+.menuBox.menuBox--first .menuBox__title {
+  color: #F33D3D;
+}
+
+
+.menuBox.menuBox--second::before {
+  background-color: #339DFF;
+}
+
+
+.menuBox.menuBox--second .menuBox__title {
+  color: #339DFF;
+}
+
+
+.menuBox.menuBox--third::before {
+  background-color: #7ACFFF;
+}
+
+
+.menuBox.menuBox--third .menuBox__title {
+  color: #7ACFFF;
+}
+
+
+.menuBox.menuBox--fourth::before {
+  background-color: #09B309;
+}
+
+
+.menuBox.menuBox--fourth .menuBox__title {
+  color: #09B309;
+  font-family: $english-font-family;
+}
+
+
+.menuBox.menuBox--fifth::before {
+  background-color: #FF6868;
+}
+
+
+.menuBox.menuBox--fifth .menuBox__title {
+  color: #FF6868;
+}
+
+
+.menuBox__title {
+  font-size: rem(16);
+  font-family: $base-font-family;
+  font-weight: $Regular;
+  line-height: 1.5;
+  letter-spacing: 0.2em;
+}
+
+
+.menuBox__icon {
+
+}
+
+
+.menuBox__icon img {
+  object-fit: contain;
+}
+
+
+.menuBox__icon.menuBox__icon--openCampus img {
+  aspect-ratio: 75 / 51;
+  width: rem(36);
+}
+
+
+.menuBox__icon.menuBox__icon--requestInformation img {
+  aspect-ratio: 61 / 42;
+  width: rem(29);
+}
+
+
+.menuBox__icon.menuBox__icon--access img {
+  aspect-ratio: 36 / 53;
+  width: rem(18);
+}
+
+
+.menuBox__icon.menuBox__icon--line img {
+  aspect-ratio: 63 / 60;
+  width: rem(30);
+}
+
+
+.menuBox__icon.menuBox__icon--contact img {
+  aspect-ratio: 55 / 40;
+  width: rem(26);
+}
+

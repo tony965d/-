@@ -1,0 +1,57 @@
+@use "global" as *;
+
+.footer-twoColumn {
+  display: flex;
+  gap: rem(19);
+
+  @include mq(md) {
+    flex-direction: column;
+    gap: rem(5);
+  }
+}
+
+
+.footer-twoColumn__image img {
+  aspect-ratio: 264 / 421;
+  object-fit: cover;
+  width: rem(127);
+  
+  @include mq(md) {
+    aspect-ratio: 226 / 299;
+    width: rem(257);
+  }
+}
+
+
+.footer-twoColumn__content {
+
+}
+
+.footer-twoColumn__text {
+  font-size: rem(10);
+  font-family: $base-font-family;
+  font-weight: $Regular;
+  color: $black;
+  line-height: 1.6;
+  letter-spacing: 0;
+  font-feature-settings: "palt";
+-webkit-font-feature-settings: "palt";
+-moz-font-feature-settings: "palt";
+
+  @include mq(md) {
+    font-size: rem(15);
+  }
+}
+
+
+.footer-twoColumn__body {
+  display: flex;
+  flex-direction: column;
+  gap: rem(19);
+  margin-top: rem(8);
+
+  @include mq(md) {
+    gap: rem(9);
+    margin-top: rem(9);
+  }
+}

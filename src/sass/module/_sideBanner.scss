@@ -1,0 +1,42 @@
+@use "global" as *;
+
+
+.sideBanner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(10);
+  background-color: rgba(243, 61, 61, 0.9);
+  padding: rem(27) rem(17) rem(63);
+  border-top-left-radius: rem(11);
+  border-bottom-left-radius: rem(11);
+}
+
+
+.sideBanner:hover {
+  opacity: 0.6;
+}
+
+
+.sideBanner__text {
+  font-size: rem(18);
+  font-family: $base-font-family;
+  font-weight: $Medium;
+  color: $white;
+  line-height: 1.0;
+  letter-spacing: 0;
+  writing-mode: vertical-rl;
+}
+
+
+.sideBanner__icon img {
+  aspect-ratio: 33 / 23;
+  object-fit: contain;
+  width: rem(38);
+}
+
+
+.sideBanner.sideBanner--requestInformation {
+  background-color: rgba(51, 157, 255, 0.9);
+}

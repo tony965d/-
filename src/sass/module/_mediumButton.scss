@@ -1,0 +1,70 @@
+@use "global" as *;
+
+
+.mediumButton {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: rem(10);
+  font-size: rem(12);
+  font-family: $english-font-family;
+  font-weight: $Medium;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: $white;
+  background-color: #FF6868;
+  width: rem(188);
+  padding-top: rem(9);
+  padding-bottom: rem(9);
+  padding-left: rem(30);
+  border-radius: rem(19);
+  transition: .3s;
+  z-index: 0;
+  
+  @include mq(md) {
+    font-size: rem(14);
+    width: 100%;
+    // width: rem(260);
+    padding-left: rem(39);
+  }
+}
+
+
+
+.mediumButton__icon img {
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  width: rem(11);
+
+  @include mq(md) {
+    width: rem(15);
+  }
+}
+
+
+// .mediumButton::before {
+//   content: "";
+//   position: absolute;
+//   top: 50%;
+//   left: 0;
+//   transform: translateY(-50%);
+//   background-image: url(../images/common/footer-mail-icon.png);
+//   background-size: contain;
+//   width: rem(11);
+//   aspect-ratio: 1 / 1;
+// }
+
+
+.mediumButton.mediumButton--tel {
+  letter-spacing: 0.1em;
+}
+
+
+// .mediumButton.mediumButton--tel::before {
+//   background-image: url(../images/common/footer-tel-icon.png);
+// }
+
+
+.mediumButton:hover {
+  opacity: 0.6;
+}

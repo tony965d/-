@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="format-detection" content="telephone=no"/>
+  <meta name="robots" content="noindex"/>
+  <!-- meta情報 -->
+  <title>タイトル</title>
+  <meta name="description" content="サイトの説明"/>
+  <meta name="keywords" content=""/>
+  <!-- ogp -->
+  <meta property="og:title" content=""/>
+  <meta property="og:type" content=""/>
+  <meta property="og:url" content=""/>
+  <meta property="og:image" content=""/>
+  <meta property="og:site_name" content=""/>
+  <meta property="og:description" content=""/>
+  <!-- ファビコン -->
+  <link rel="”icon”" href=""/>
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="./assets/css/style.css"/>
+  <!-- JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <!-- G-SAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script defer src="./assets/js/script.js"></script>
+</head>
+<body>
+  <header id="header" class="header">
+    <div class="header__inner inner">
+      <h1 class="header__logo">
+        <a href="" class="header__image"><img src="/assets/images/common/ダミー1.png" alt=""></a>
+      </h1>
+      <div class="header__hamburger hamburger js-hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="header__pcNav pcNav">
+        <ul class="pcNav__items">
+          <li class="pcNav__item">
+            <a href="" class="pcNav__menu">
+              <div class="pcNav__title">NEWS</div>
+              <p class="pcNav__subTitle">新着情報</p>
+            </a>    
+          </li>
+          <li class="pcNav__item">
+            <a href="" class="pcNav__menu">
+              <div class="pcNav__title">ABOUT</div>
+              <p class="pcNav__subTitle">私たちについて</p>
+            </a>    
+          </li>
+          <li class="pcNav__item">
+            <a href="" class="pcNav__menu">
+              <div class="pcNav__title">BLOG</div>
+              <p class="pcNav__subTitle">ブログ</p>
+            </a>    
+          </li>
+          <li class="pcNav__item">
+            <a href="" class="pcNav__menu">
+              <div class="pcNav__title">CONTACT</div>
+              <p class="pcNav__subTitle">お問合せ</p>
+            </a>  
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <nav class="header__spNav spNav js-spNav">
+      <div class="spNav__inner inner">
+        <div class="spNav__wrapper">
+          <ul class="spNav__items">
+            <li class="spNav__item">
+              <a href="#" class="spNav__menu">TOP</a>
+            </li>
+            <li class="spNav__item">
+              <a href="#" class="spNav__menu">NEWS</a>
+            </li>
+            <li class="spNav__item">
+              <a href="#" class="spNav__menu">ABOUT</a>
+            </li>
+            <li class="spNav__item">
+              <a href="#" class="spNav__menu">BLOG</a>
+            </li>
+            <li class="spNav__item">
+              <a href="#" class="spNav__menu">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="mv">
+      <div class="mv__wrapper">
+        <div class="mv__swiper swiper js-mvSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <picture class="slide-image mv__image">
+                <img src="/assets/images/common/ダミー1.png" alt="">
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture class="slide-image mv__image">
+                <img src="/assets/images/common/ダミー2.png" alt="">
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture class="slide-image mv__image">
+                <img src="/assets/images/common/ダミー3.png" alt="">
+              </picture>
+            </div>
+          </div>
+        </div>
+        <div class="mv__body">
+          <h2 class="mv__title">メインタイトル</h2>
+          <p class="mv__subTitle">サブタイトルが入ります</p>
+        </div>
+      </div>
+    </section>
+    <section class="about top-about">
+      <div class="about__inner inner">
+
+
+        <div class="cards">
+          <a href="#" class="cards__card card">
+            <figure class="card__image">
+              <img src="/assets/images/common/ダミー1.png" alt="">
+            </figure>
+            <div class="card__header">
+              <time class="card__date">20XX.XX/XX</time>
+              <p class="card__title">タイトル</p>
+            </div>
+            <div class="card__body">
+              <p class="card__text">
+                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
+                ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
+              </p>
+            </div>
+          </a>
+        </div>
+
+
+        <a href="#" class="button">ボタン</a>
+
+
+      </div>
+    </section>
+  </main>
+
+
+
+  <footer class="footer top-footer">
+    <div class="footer__inner inner">
+      <nav class="footer__nav footerNav">
+        <a href="#" class="footerNav__logo">
+          <img src="/assets/images/common/ダミー1.png" alt="">
+        </a>
+        <ul class="footerNav__items">
+          <li class="footerNav__item">
+            <a href="#" class="footerNav__menu">トップ</a>
+          </li>
+          <li class="footerNav__item">
+            <a href="#" class="footerNav__menu">NEWS</a>
+          </li>
+          <li class="footerNav__item">
+            <a href="#" class="footerNav__menu">ABOUT</a>
+          </li>
+          <li class="footerNav__item">
+            <a href="#" class="footerNav__menu">BLOG</a>
+          </li>
+          <li class="footerNav__item">
+            <a href="#" class="footerNav__menu">CONTACT</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer__copyright">
+      <small>©2022-2023 ○○○○ Inc.</small>
+    </div>
+  </footer>
+</body>
+
+</html>

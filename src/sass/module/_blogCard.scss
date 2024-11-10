@@ -1,0 +1,63 @@
+@use "global" as *;
+
+
+.blogCard {
+  display: grid;
+  grid-row: span 3;
+  grid-template-rows: subgrid;
+  gap: rem(4);
+  
+  @include mq(md) {
+    display: flex;
+    flex-direction: column;
+    gap: rem(9);
+  }
+}
+
+
+.blogCard:hover {
+  opacity: 0.6;
+}
+
+
+.blogCard__image  img {
+  aspect-ratio: 656 / 446;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  
+  @include mq(md) {
+    aspect-ratio: 227 / 155;
+    // width: rem(258);
+  }
+}
+
+
+.blogCard__date {
+  font-size: rem(12);
+  font-family: $base-font-family;
+  font-weight: $Regular;
+  color: #9A9A9A;
+  line-height: 1.0;
+  letter-spacing: 0;
+
+  @include mq(md) {
+    font-size: rem(18);
+  }
+}
+
+
+.blogCard__title {
+  font-size: rem(13);
+  font-family: $base-font-family;
+  font-weight: $Regular;
+  color: $black;
+  line-height: 1.7;
+  letter-spacing: 0;
+
+  @include mq(md) {
+    font-size: rem(18);
+  }
+}
+
+

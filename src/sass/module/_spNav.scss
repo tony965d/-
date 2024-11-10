@@ -1,0 +1,99 @@
+@use "global" as *;
+
+
+.spNav {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: rem(98);
+  padding-bottom: rem(172);
+  background-color: #FAF9F3;
+  z-index: 100;
+  overflow: scroll;
+}
+
+
+.spNav__inner.inner {
+  max-width: rem(500);
+  
+  @include mq(md) {
+    max-width: rem(1130);
+  }
+}
+
+
+.spNav__items {
+  margin-top: rem(15);
+}
+
+
+.spNav__items.spNav__items--first {
+  margin-top: 0;
+}
+
+
+.spNav__item {
+  background-color: $white;
+  border-radius: rem(5);
+  padding-left: rem(23);
+  padding-right: rem(23);
+  margin-top: rem(12);
+}
+
+
+.spNav__item:first-child {
+  margin-top: 0;
+}
+
+
+.spNav__menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: rem(8);
+  font-size: rem(15);
+  font-family: $base-font-family;
+  font-weight: $Regular;
+  color: $black;
+  line-height: 1.0;
+  letter-spacing: 0;
+  padding: rem(12) 0;
+}
+
+
+.spNav__menu.spNav__menu--language {
+  font-family: $english-font-family;
+}
+
+
+.spNav__menu-reference {
+  display: inline-block;
+  width: rem(3);
+  height: rem(15);
+  background-color: $black;
+}
+
+
+.spNav__body {
+  display: none;
+}
+
+
+.spNav__menuBoxes {
+  margin-top: rem(15);
+}
+
+
+.spNav__menu-language img {
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  width: rem(22);
+}
+
+
+.spNav__snsBlock {
+  margin-top: rem(38);
+}

@@ -1,0 +1,18 @@
+@use "global" as *;
+
+
+.dot {
+  width: rem(5);
+  aspect-ratio: 1 / 1;
+  background-color: #8E2DE2;
+  border-radius: 50%;
+  
+  @include mq(md) {
+    width: rem(13);
+  }
+}
+
+
+.dot.dot--second {
+  background-color: #4A00E0;
+}

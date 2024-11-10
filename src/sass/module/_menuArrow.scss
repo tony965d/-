@@ -1,0 +1,401 @@
+@use "global" as *;
+
+
+.menuArrow {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: rem(18);
+  height: rem(18);
+  border-radius: 50%;
+  border: solid 1px #A6A6A6;
+}
+
+
+.menuArrow::before {
+  content: '';
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, 50%) rotate(225deg);
+  width: rem(5);
+  height: rem(5);
+  border-bottom: solid 1px $black;
+  border-right: solid 1px $black;
+  transition: .3s;
+}
+
+
+.menuArrow.active::before { 
+  transform: translateX(-50%) rotate(45deg);
+  transition: .3s;
+}
+
+
+.menuArrow.menuArrow--right::before {
+  top: 50%;
+  transform: translate(-75%, -50%) rotate(45deg);
+  border-bottom: none;
+  border-right: none;
+  border-top: solid 1px $black;
+  border-right: solid 1px $black;
+}
+
+
+.menuArrow.menuArrow--access {
+  right: rem(14);
+  width: rem(12);
+  height: rem(12);
+  border: solid 1px #FF6868;
+
+  @include mq(md) {
+    right: rem(28);
+    width: rem(18);
+    height: rem(18);
+  }
+}
+
+
+.menuArrow.menuArrow--access:before {
+  top: 50%;
+  transform: translate(-75%, -50%) rotate(45deg);
+  width: rem(3);
+  height: rem(3);
+  border-bottom: none;
+  border-right: none;
+  border-top: solid 1px #FF6868;
+  border-right: solid 1px #FF6868;
+  
+  @include mq(md) {
+    width: rem(4);
+    height: rem(4);
+  }
+}
+
+
+.menuArrow.menuArrow--footerNav {
+  right: rem(-20);
+  width: rem(16);
+  height: rem(16);
+  border: solid 1px $black;
+}
+
+
+.menuArrow.menuArrow--footerNav:before {
+  top: 50%;
+  transform: translate(-75%, -50%) rotate(45deg);
+  width: rem(3);
+  height: rem(3);
+  border-bottom: none;
+  border-right: none;
+  border-top: solid 1px $black;
+  border-right: solid 1px $black;
+}
+
+
+.menuArrow.menuArrow--sideBanner {
+  top: unset;
+  left: 50%;
+  bottom: rem(14);
+  width: rem(16);
+  height: rem(16);  
+  border: solid rem(1.5) $white;
+  transform: translate(-50%, 0);
+}
+
+
+.menuArrow.menuArrow--sideBanner:before {
+  top: 50%;
+  transform: translate(-75%, -50%) rotate(45deg);
+  border-bottom: none;
+  border-right: none;
+  border-top: solid rem(1.5) $white;
+  border-right: solid rem(1.5) $white;
+}
+
+
+.menuArrow.menuArrow--button {
+  right: rem(15);
+  width: rem(13);
+  height: rem(13);
+  border: solid 1px $white;
+  
+  @include mq(md) {
+    right: rem(35);
+    width: rem(32);
+    height: rem(32);
+  }
+}
+
+
+.menuArrow.menuArrow--button::before {
+  top: 50%;
+  width: rem(3);
+  height: rem(3);
+  transform: translate(-75%, -50%) rotate(45deg);
+  border-bottom: none;
+  border-right: none;
+  border-top: solid 1px $white;
+  border-right: solid 1px $white;
+  
+  @include mq(md) {
+    width: rem(7);
+    height: rem(7);
+  }
+}
+
+
+
+.menuArrow.menuArrow--news {
+  position: absolute;
+  top: 50%;
+  right: rem(16);
+  transform: translateY(-50%);
+  width: rem(16);
+  height: rem(16);
+  border: solid 1px $black;
+  
+  @include mq(md) {
+    right: rem(14);
+    width: rem(28);
+    height: rem(28);
+  }
+}
+
+
+.menuArrow.menuArrow--news:before {
+  top: 50%;
+  transform: translate(-75%, -50%) rotate(45deg);
+  width: rem(3);
+  height: rem(3);
+  border-bottom: none;
+  border-right: none;
+  border-top: solid 1px $black;
+  border-right: solid 1px $black;
+  
+  @include mq(md) {
+    width: rem(6);
+    height: rem(6);
+  }
+}
+
+
+.menuArrow.menuArrow--message {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: rem(16);
+  height: rem(16);
+  border: solid 1px $black;
+  
+  @include mq(md) {
+    width: rem(38);
+    height: rem(38);
+  }
+}
+
+
+.menuArrow.menuArrow--message:before {
+  top: 50%;
+  transform: translate(-75%, -50%) rotate(45deg);
+  width: rem(3);
+  height: rem(3);
+  border-bottom: none;
+  border-right: none;
+  border-top: solid 1px $black;
+  border-right: solid 1px $black;
+  
+  @include mq(md) {
+    width: rem(8);
+    height: rem(8);
+  }
+}
+
+
+.menuArrow.menuArrow--materialsRequest {
+  position: absolute;
+  bottom: rem(6);
+  top: unset;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: rem(20);
+  height: rem(20);
+  border: none;
+  background-color: $white;
+  
+  @include mq(md) {
+    bottom: rem(-27);
+    width: rem(54);
+    height: rem(54);
+  }
+}
+
+
+.menuArrow.menuArrow--materialsRequest:before {
+  top: 50%;
+  transform: translate(-75%, -50%) rotate(45deg);
+  width: rem(4);
+  height: rem(4);
+  border-bottom: none;
+  border-right: none;
+  border-top: solid 1px #616161;
+  border-right: solid 1px #616161;
+  
+  @include mq(md) {
+    width: rem(12);
+    height: rem(12);
+  }
+}
+
+
+.menuArrow.menuArrow--line {
+  position: absolute;
+  top: 50%;
+  right: rem(19);
+  transform: translateY(-50%);
+  width: rem(19);
+  height: rem(19);
+  border: none;
+  background-color: #00C300;
+  
+  @include mq(md) {
+    right: rem(36);
+    width: rem(32);
+    height: rem(32);
+  }
+}
+
+
+.menuArrow.menuArrow--line:before {
+  top: 50%;
+  transform: translate(-75%, -50%) rotate(45deg);
+  width: rem(4);
+  height: rem(4);
+  border-bottom: none;
+  border-right: none;
+  border-top: solid 1px $white;
+  border-right: solid 1px $white;
+  
+  @include mq(md) {
+    width: rem(7);
+    height: rem(7);
+  }
+}
+
+
+.menuArrow.menuArrow--courseContents {
+  position: relative;
+  display: inline-block;
+  top: unset;
+  right: unset;
+  transform: unset;
+  width: rem(18);
+  height: rem(18);
+  border: solid 1px $black;
+  margin-top: rem(5);
+  
+  @include mq(md) {
+    width: rem(42);
+    height: rem(42);
+    margin-top: rem(27);
+  }
+}
+
+
+.menuArrow.menuArrow--courseContents:before {
+  top: 50%;
+  transform: translate(-75%, -50%) rotate(45deg);
+  width: rem(4);
+  height: rem(4);
+  border-bottom: none;
+  border-right: none;
+  border-top: solid 1px $black;
+  border-right: solid 1px $black;
+  
+  @include mq(md) {
+    width: rem(9);
+    height: rem(9);
+  }
+}
+
+
+.menuArrow.menuArrow--lead {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: rem(16);
+  height: rem(16);
+  border: solid 1px $black;
+  
+  @include mq(md) {
+    width: rem(28);
+    height: rem(28);
+  }
+}
+
+
+.menuArrow.menuArrow--lead:before {
+  top: 50%;
+  transform: translate(-75%, -50%) rotate(45deg);
+  width: rem(3);
+  height: rem(3);
+  border-bottom: none;
+  border-right: none;
+  border-top: solid 1px $black;
+  border-right: solid 1px $black;
+  
+  @include mq(md) {
+    width: rem(6);
+    height: rem(6);
+  }
+}
+
+
+.menuArrow.menuArrow--category {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: rem(9);
+  height: rem(9);
+  border: solid rem(1) $black;
+  
+  @include mq(md) {
+    width: rem(20);
+    height: rem(20);
+    border: solid rem(2) $black;
+  }
+}
+
+
+.menuArrow.menuArrow--category:before {
+  top: 46%;
+  left: 50%;
+  transform: translate(-75%, -50%) rotate(45deg);
+  width: rem(2);
+  height: rem(2);
+  border-bottom: none;
+  border-right: none;
+  border-top: solid rem(1) $black;
+  border-right: solid rem(1) $black;
+  
+  @include mq(md) {
+    top: 50%;
+    left: 52%;
+    width: rem(5);
+    height: rem(5);
+    border-top: solid rem(2) $black;
+    border-right: solid rem(2) $black;
+  }
+}
+
+
+
+.test__image img {
+  aspect-ratio: 300 / 150;
+  object-fit: cover;
+  height: 100%;
+}

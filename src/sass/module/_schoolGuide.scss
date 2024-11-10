@@ -1,0 +1,258 @@
+@use "global" as *;
+
+
+.schoolGuide {
+  position: relative;
+  padding-top: rem(65);
+  padding-bottom: rem(65);
+  
+  @include mq(md) {
+    padding-top: rem(228);
+    padding-bottom: rem(228);
+  }
+}
+
+.schoolGuide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #FFF4F2;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+
+.schoolGuide__inner.inner {
+
+}
+
+
+.schoolGuide__wrapper {
+
+}
+
+
+.schoolGuide__openCampus {
+
+}
+
+
+.schoolGuide__openCampus-inner.inner {
+
+  @include mq(md) {
+    max-width: rem(896);
+  }
+}
+
+
+.schoolGuide__openCampus-speechBubble {
+  position: relative;
+  padding: rem(9) 0;
+  background-color: #FF916C;
+  border-radius: rem(14);
+  
+  @include mq(md) {
+    padding: rem(22) 0;
+    border-radius: rem(32);
+  }
+}
+
+
+.schoolGuide__openCampus-speechBubble::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: rem(-8);
+  transform: translateX(-50%);
+  width: rem(10);
+  height: rem(12);
+  background-color: #FF916C;
+  clip-path: polygon(100% 0, 0 0, 50% 100%);
+  z-index: -1;
+  
+  @include mq(md) {
+    bottom: rem(-23);
+    width: rem(23);
+    height: rem(28);
+  }
+}
+
+
+.schoolGuide__openCampus-text {
+  font-size: rem(10);
+  font-family: $base-font-family;
+  font-weight: $Regular;
+  color: $white;
+  line-height: 1.0;
+  letter-spacing: 0.01em;
+  text-align: center;
+
+  @include mq(md) {
+    font-size: rem(23);
+  }
+}
+
+
+.schoolGuide__openCampus-banner {
+  display: inline-block;
+  margin-top: rem(14);
+  
+  @include mq(md) {
+    margin-top: rem(42);
+  }
+}
+
+
+.schoolGuide__openCampus-banner:hover {
+  opacity: 0.6;
+}
+
+
+.schoolGuide__materialsRequest {
+  margin-top: rem(19);
+
+  @include mq(md) {
+    margin-top: rem(137);
+  }
+}
+
+.schoolGuide__materialsRequest-block {
+  position: relative;
+  text-align: right;
+  padding-top: rem(21);
+  padding-right: rem(24);
+  padding-bottom: rem(13);
+  border-radius: rem(7);
+  
+  @include mq(md) {
+    padding-top: rem(115);
+    padding-right: rem(79);
+    padding-bottom: rem(100);
+    border-radius: rem(23);
+  }
+}
+
+
+.schoolGuide__materialsRequest-block::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../images/common/materialsRequest-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-radius: rem(7);
+  
+  @include mq(md) {
+    border-radius: rem(23);
+  }
+}
+
+
+.schoolGuide__materialsRequest-block::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(119, 119, 119, 0.5);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-radius: rem(7);
+  
+  @include mq(md) {
+    border-radius: rem(23);
+  }
+}
+
+
+.schoolGuide__materialsRequest-box {
+  position: relative;
+  display: inline-block;
+  padding-top: rem(14);
+  padding-bottom: rem(26);
+  padding-left: rem(13);
+  padding-right: rem(13);
+  border: solid 1px $white;
+  border-top: none;
+  
+  @include mq(md) {
+    padding-top: rem(64);
+    padding-bottom: rem(48);
+    padding-left: rem(40);
+    padding-right: rem(40);
+  }
+}
+
+
+.schoolGuide__materialsRequest-box::before {
+  content: "";
+  position: absolute;
+  // top: rem(0.5);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  // height: rem(0.5);
+  background: linear-gradient(to right,$white 0%, $white 25%, transparent 25%, transparent 75%, $white 75%, $white 100%);
+}
+
+
+.schoolGuide__materialsRequest-box:hover {
+  opacity: 0.6;
+}
+
+
+.schoolGuide__materialsRequest-icon {
+  position: absolute;
+  top: rem(-14);
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include mq(md) {
+    top: rem(-40);
+  }
+}
+
+
+.schoolGuide__materialsRequest-icon img {
+  aspect-ratio: 83 / 59;
+  object-fit: contain;
+  width: rem(40);
+  
+  @include mq(md) {
+    aspect-ratio: 99 / 70;
+    width: rem(113);
+  }
+}
+
+
+.schoolGuide__materialsRequest-text {
+  display: inline-block;
+  font-size: rem(19);
+  font-family: $base-font-family;
+  font-weight: $Medium;
+  color: $white;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+  text-align: center;
+
+  @include mq(md) {
+    font-size: rem(46);
+  }
+}
+
+
+
+.schoolGuide__line {
+  margin-top: rem(19);
+
+  @include mq(md) {
+    margin-top: rem(137);
+  }
+}

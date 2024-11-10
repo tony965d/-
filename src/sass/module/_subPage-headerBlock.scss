@@ -1,0 +1,25 @@
+@use "global" as *;
+
+
+.subPage-headerBlock {
+  position: relative;
+  padding-top: rem(22);
+  padding-bottom: rem(22);
+  
+  @include mq(md) {
+    padding-top: rem(48);
+    padding-bottom: rem(48);
+  }
+}
+
+
+.subPage-headerBlock::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #FAF9F3; 
+  width: 100%;
+  height: 100%; 
+  z-index: -1;
+}

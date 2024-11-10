@@ -1,0 +1,68 @@
+@use "global" as *;
+
+
+.topics {
+
+}
+
+
+.topics__inner.inner {
+
+}
+
+
+.topics__wrapper {
+
+}
+
+
+.topics__sectionHeader {
+
+}
+
+
+.topics__body {
+  margin-top: rem(12);
+
+  @include mq(md) {
+    margin-top: rem(27);
+  }
+}
+
+
+.topics__body-inner.inner {
+  position: relative;
+}
+
+
+.topics__body-wrapper {
+  position: relative;
+}
+
+
+.topics__swiper {
+
+}
+
+
+.topics__swiper-wrapper {
+
+}
+
+
+.topics__image:hover {
+  opacity: 0.6;
+}
+
+
+.topics__image img {
+  aspect-ratio: 656 / 437;
+  object-fit: contain;
+  height: 100%;
+
+  @include mq(md) {
+    aspect-ratio: 310 / 208;
+  }
+}
+
+

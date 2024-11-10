@@ -1,0 +1,35 @@
+@use "global" as *;
+
+
+.blog {
+  overflow-x: clip;
+}
+
+
+.blog__swiperArea {
+  position: relative;
+}
+
+
+.blog__swiperArea-inner.inner {
+  position: relative;
+}
+
+
+.blog__swiperArea-wrapper {
+  position: relative;
+  
+  @include mq(md) {
+    margin-right: calc(50% - 50vw);
+  }
+}
+
+
+.blog__button {
+  text-align: center;
+  margin-top: rem(19);
+
+  @include mq(md) {
+    margin-top: rem(114);
+  }
+}

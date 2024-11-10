@@ -1,0 +1,32 @@
+@use "global" as *;
+
+
+.footerNav-menu {
+  display: none;
+
+  @include mq(md) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+.pcNav-menu__link {
+  
+  @include mq(md) {
+    font-size: rem(14);
+    font-family: $base-font-family;
+    font-weight: $Regular;
+    color: $black;
+    line-height: 2.0;
+    letter-spacing: 0;
+    font-feature-settings: "palt";
+-webkit-font-feature-settings: "palt";
+-moz-font-feature-settings: "palt";
+  }
+}
+
+
+.pcNav-menu__link:hover {
+  opacity: 0.6;
+}
